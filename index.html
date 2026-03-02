@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plate Lunch Digest — Hawaii's Daily Briefing</title>
-  <meta name="description" content="Your daily Hawaii news digest covering business, real estate, clean energy, and tourism. Free 5-minute morning briefing.">
-  <meta property="og:title" content="Plate Lunch Digest — Hawaii's Daily Briefing">
+  <title>Plate Lunch Digest | Hawaii's Daily Briefing</title>
+  <meta name="description" content="Your daily Hawaii news digest covering business, real estate, clean energy, and tourism. Free 5 minute morning briefing.">
+  <meta property="og:title" content="Plate Lunch Digest | Hawaii's Daily Briefing">
   <meta property="og:description" content="Your daily Hawaii news digest covering business, real estate, clean energy, and tourism.">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://platelunchdigest.com/">
@@ -302,10 +302,27 @@
       transform: translateY(-2px);
     }
     
+    .subscribe-form button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
     .form-note {
       margin-top: 16px;
       font-size: 14px;
       color: var(--slate);
+    }
+    
+    .form-error-inline {
+      color: var(--coral);
+      font-size: 14px;
+      margin-top: 8px;
+      display: none;
+    }
+    
+    .form-error-inline.visible {
+      display: block;
     }
     
     /* Story Section */
@@ -864,13 +881,13 @@
         <div class="hero-tag">Your daily Hawaii news digest</div>
         <p class="hero-greeting" id="greeting">Aloha kakahiaka.</p>
         <h1>Plate Lunch <em>Digest</em></h1>
-        <p class="hero-desc">Here's your daily digest with the stories shaping Hawaii today — from business and real estate to clean energy and tourism. All the news, no fluff.</p>
+        <p class="hero-desc">Here's your daily digest with the stories shaping Hawaii today, from business and real estate to clean energy and tourism. All the news, no fluff.</p>
         <p class="hero-pidgin"><span>Garans</span> (gah-rahns) no kanak attack.</p>
         <form class="subscribe-form" id="hero-form" onsubmit="handleHeroSubmit(event)">
           <input type="email" id="hero-email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe free</button>
+          <button type="submit" id="hero-submit-btn">Subscribe free</button>
         </form>
-        <p class="form-note">Join 1,000+ Hawaii professionals. Free daily digest.</p>
+        <div class="form-error-inline" id="hero-error"></div>
       </div>
     </div>
   </section>
@@ -887,13 +904,13 @@
         <div class="story-content">
           <h2>What is Plate Lunch <em>Digest</em>?</h2>
           <p>
-            Every morning, we scour dozens of local sources — <strong>Hawaii News Now, Civil Beat, Pacific Business News, Star-Advertiser</strong>, and more — so you don't have to.
+            Every morning, we scour dozens of local sources, <strong>Hawaii News Now, Civil Beat, Pacific Business News, Star Advertiser</strong>, and more, so you don't have to.
           </p>
           <p>
             We distill the most important stories into a <strong>quick, scannable digest</strong> that lands in your inbox before your first cup of coffee. Business moves. Real estate trends. Clean energy developments. Tourism updates. All the stories shaping Hawaii, in one place.
           </p>
           <p>
-            Like its namesake, Plate Lunch Digest is <strong>hearty, balanced, and satisfying</strong> — a complete meal of news without the filler. Read it in 5 minutes and start your day informed.
+            Like its namesake, Plate Lunch Digest is <strong>hearty, balanced, and satisfying</strong>, a complete meal of news without the filler. Read it in 5 minutes and start your day informed.
           </p>
         </div>
       </div>
@@ -947,8 +964,9 @@
       <p>Free daily digest. 5 minute read. No spam, just news.</p>
       <form class="subscribe-form" onsubmit="handleCTASubmit(event)">
         <input type="email" id="cta-email" placeholder="your@email.com" required>
-        <button type="submit">Get the Digest</button>
+        <button type="submit" id="cta-submit-btn">Get the Digest</button>
       </form>
+      <div class="form-error-inline" id="cta-error"></div>
     </div>
   </section>
   
@@ -958,13 +976,13 @@
         <div class="about-content">
           <h2>About</h2>
           <p>
-            Plate Lunch Digest was born from a simple frustration: keeping up with Hawaii news meant juggling a dozen different sources every morning. We built this digest because we wanted something better — a single, well-curated briefing that covers what matters without the noise.
+            Plate Lunch Digest was born from a simple frustration: keeping up with Hawaii news meant juggling a dozen different sources every morning. We built this digest because we wanted something better, a single, well curated briefing that covers what matters without the noise.
           </p>
           <p>
-            Every day, we read through Hawaii News Now, Civil Beat, Pacific Business News, the Star-Advertiser, and more so you don't have to. We distill the most important stories into a quick read that respects your time.
+            Every day, we read through Hawaii News Now, Civil Beat, Pacific Business News, the Star Advertiser, and more so you don't have to. We distill the most important stories into a quick read that respects your time.
           </p>
           <p>
-            The name? It's a nod to Hawaii's most iconic meal — diverse ingredients, brought together on one plate. That's what we do with news. Business, real estate, energy, tourism — all in one place, every morning.
+            The name? It's a nod to Hawaii's most iconic meal, diverse ingredients, brought together on one plate. That's what we do with news. Business, real estate, energy, tourism, all in one place, every morning.
           </p>
         </div>
         <div class="about-values">
@@ -1000,13 +1018,9 @@
         <h2>Get in Touch</h2>
         <p>Have a story tip? Want to advertise? Just want to say aloha? We'd love to hear from you.</p>
         <div class="contact-methods">
-          <a href="mailto:hello@platelunchdigest.com" class="contact-link">
+          <a href="/cdn-cgi/l/email-protection#18707d747477586874796c7d746d767b707c717f7d6b6c367b7775" class="contact-link">
             <span class="contact-icon">✉️</span>
-            <span>hello@platelunchdigest.com</span>
-          </a>
-          <a href="https://twitter.com/platelunchhi" class="contact-link">
-            <span class="contact-icon">𝕏</span>
-            <span>@platelunchhi</span>
+            <span><span class="__cf_email__" data-cfemail="244c4148484b64544845504148514a474c404d434157500a474b49">[email&#160;protected]</span></span>
           </a>
         </div>
       </div>
@@ -1015,7 +1029,8 @@
   
   <footer>
     <div class="container">
-      <p>© 2026 Plate Lunch Digest · Made with aloha in Honolulu, Hawaiʻi</p>
+      <p>© 2026 Plate Lunch Digest. Made with aloha in Upcountry Maui, Hawaii.</p>
+      <p style="margin-top: 12px;"><a href="/wireframe" style="color: var(--slate); font-size: 12px; text-decoration: none;">Wireframe</a></p>
     </div>
   </footer>
   
@@ -1036,16 +1051,11 @@
         <div class="form-error" id="form-error"></div>
         
         <div class="form-group">
-          <label for="modal-first-name">First name (optional)</label>
-          <input type="text" id="modal-first-name" placeholder="Your first name">
-        </div>
-        
-        <div class="form-group">
           <label for="modal-email">Email address</label>
           <input type="email" id="modal-email" placeholder="you@example.com" required>
         </div>
         
-        <button type="submit" id="modal-submit-btn">Subscribe — it's free</button>
+        <button type="submit" id="modal-submit-btn">Subscribe free</button>
       </form>
       
       <p class="modal-footer">
@@ -1054,7 +1064,7 @@
     </div>
   </div>
   
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     // API Configuration
     const API_BASE = 'https://app.platelunchdigest.com';
     
@@ -1101,35 +1111,11 @@
       }
     });
     
-    // Handle hero form - opens modal with email pre-filled
-    function handleHeroSubmit(event) {
-      event.preventDefault();
-      const email = document.getElementById('hero-email').value;
-      document.getElementById('modal-email').value = email;
-      openModal();
-    }
-    
-    // Handle CTA form - opens modal with email pre-filled
-    function handleCTASubmit(event) {
-      event.preventDefault();
-      const email = document.getElementById('cta-email').value;
-      document.getElementById('modal-email').value = email;
-      openModal();
-    }
-    
-    // Handle modal form submission
-    async function handleModalSubmit(event) {
-      event.preventDefault();
-      
-      const submitBtn = document.getElementById('modal-submit-btn');
-      const errorEl = document.getElementById('form-error');
-      const email = document.getElementById('modal-email').value;
-      const firstName = document.getElementById('modal-first-name').value;
-      
-      // Disable button and show loading state
+    // Subscribe function - used by all forms
+    async function subscribeEmail(email, submitBtn, errorEl, originalBtnText) {
       submitBtn.disabled = true;
       submitBtn.textContent = 'Subscribing...';
-      errorEl.classList.remove('visible');
+      if (errorEl) errorEl.classList.remove('visible');
       
       try {
         const response = await fetch(API_BASE + '/api/subscribe', {
@@ -1138,30 +1124,51 @@
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            email: email,
-            first_name: firstName
+            email: email
           })
         });
         
         const data = await response.json();
         
         if (data.success) {
-          // Redirect to thank you page
           window.location.href = '/thank-you';
         } else {
-          // Show error
-          errorEl.textContent = data.error || 'Something went wrong. Please try again.';
-          errorEl.classList.add('visible');
+          if (errorEl) {
+            errorEl.textContent = data.error || 'Something went wrong. Please try again.';
+            errorEl.classList.add('visible');
+          }
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Subscribe — it\'s free';
+          submitBtn.textContent = originalBtnText;
         }
-      } catch (error) {
-        errorEl.textContent = 'Connection error. Please try again.';
-        errorEl.classList.add('visible');
+      } catch (err) {
+        if (errorEl) {
+          errorEl.textContent = 'Connection error. Please try again.';
+          errorEl.classList.add('visible');
+        }
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Subscribe — it\'s free';
+        submitBtn.textContent = originalBtnText;
       }
     }
-  </script>
-</body>
-</html>
+    
+    // Handle hero form - direct subscribe
+    async function handleHeroSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('hero-email').value;
+      const submitBtn = document.getElementById('hero-submit-btn');
+      const errorEl = document.getElementById('hero-error');
+      await subscribeEmail(email, submitBtn, errorEl, 'Subscribe free');
+    }
+    
+    // Handle CTA form - direct subscribe
+    async function handleCTASubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('cta-email').value;
+      const submitBtn = document.getElementById('cta-submit-btn');
+      const errorEl = document.getElementById('cta-error');
+      await subscribeEmail(email, submitBtn, errorEl, 'Get the Digest');
+    }
+    
+    // Handle modal form submission
+    async function handleModalSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('m
