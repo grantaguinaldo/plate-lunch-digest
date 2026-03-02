@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plate Lunch Digest — Hawaii's Daily Briefing</title>
+  <meta name="description" content="Your daily Hawaii news digest covering business, real estate, clean energy, and tourism. Free 5-minute morning briefing.">
+  <meta property="og:title" content="Plate Lunch Digest — Hawaii's Daily Briefing">
+  <meta property="og:description" content="Your daily Hawaii news digest covering business, real estate, clean energy, and tourism.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://platelunchdigest.com/">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0D1B2A;
+      --navy: #1B263B;
+      --slate: #415A77;
+      --steel: #778DA9;
+      --cloud: #E0E1DD;
+      --white: #FFFFFF;
+      --coral: #FF6B6B;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--deep);
+      color: var(--cloud);
+      line-height: 1.6;
+    }
+    
+    body.modal-open {
+      overflow: hidden;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Navigation */
+    nav {
+      padding: 24px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(to bottom, var(--deep), transparent);
+    }
+    
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo-text {
+      display: flex;
+      gap: 6px;
+    }
+    
+    .logo em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--slate), var(--steel));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    
+    .nav-cta {
+      background: var(--white);
+      color: var(--deep);
+      padding: 12px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+    
+    .nav-cta:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    
+    .nav-link {
+      color: var(--steel);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover {
+      color: var(--white);
+    }
+    
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Animated wave background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(to top, var(--navy), transparent);
+    }
+    
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 C150,120 350,0 600,60 C850,120 1050,0 1200,60 L1200,120 L0,120 Z' fill='%231B263B'/%3E%3C/svg%3E") repeat-x;
+      animation: wave 8s linear infinite;
+    }
+    
+    .wave:nth-child(2) {
+      bottom: 10px;
+      opacity: 0.5;
+      animation-delay: -2s;
+      animation-duration: 10s;
+    }
+    
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .hero-tag::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--coral);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(48px, 8vw, 80px);
+      font-weight: 600;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .hero h1 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .hero-greeting {
+      font-family: 'Fraunces', serif;
+      font-size: 24px;
+      font-style: italic;
+      color: var(--coral);
+      margin-bottom: 16px;
+    }
+    
+    .hero-desc {
+      font-size: 20px;
+      color: var(--steel);
+      margin-bottom: 40px;
+      max-width: 540px;
+      line-height: 1.7;
+    }
+    
+    .hero-pidgin {
+      font-size: 15px;
+      color: var(--slate);
+      font-style: italic;
+      margin-top: -24px;
+      margin-bottom: 40px;
+    }
+    
+    .hero-pidgin span {
+      color: var(--steel);
+    }
+    
+    /* Subscribe form */
+    .subscribe-form {
+      display: flex;
+      gap: 12px;
+      max-width: 440px;
+    }
+    
+    .subscribe-form input {
+      flex: 1;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: var(--white);
+      transition: all 0.3s;
+    }
+    
+    .subscribe-form input::placeholder {
+      color: var(--steel);
+    }
+    
+    .subscribe-form input:focus {
+      outline: none;
+      background: rgba(255,255,255,0.12);
+      border-color: var(--steel);
+    }
+    
+    .subscribe-form button {
+      padding: 16px 32px;
+      font-size: 15px;
+      font-family: inherit;
+      font-weight: 600;
+      background: var(--white);
+      color: var(--deep);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    
+    .subscribe-form button:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    .form-note {
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--slate);
+    }
+    
+    /* Story Section */
+    .story {
+      padding: 100px 0;
+      background: var(--navy);
+    }
+    
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .story-content h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .story-content h2 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .story-content p {
+      font-size: 17px;
+      color: var(--steel);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    
+    .story-content p strong {
+      color: var(--cloud);
+    }
+    
+    .story-visual {
+      position: relative;
+    }
+    
+    .story-card {
+      background: var(--deep);
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .story-emoji {
+      font-size: 80px;
+      margin-bottom: 24px;
+    }
+    
+    .story-caption {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--steel);
+      line-height: 1.5;
+    }
+    
+    /* Features */
+    .features {
+      padding: 100px 0;
+      background: var(--deep);
+    }
+    
+    .features-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .features-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .features-header h2 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .features-header p {
+      font-size: 18px;
+      color: var(--steel);
+    }
+    
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    
+    .feature-item {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-item:hover {
+      transform: translateY(-4px);
+    }
+    
+    .feature-icon {
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+    
+    .feature-item h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    
+    .feature-item p {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.6;
+    }
+    
+    /* CTA */
+    .cta {
+      padding: 100px 0;
+      background: var(--navy);
+      text-align: center;
+    }
+    
+    .cta h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    
+    .cta > p {
+      font-size: 18px;
+      color: var(--steel);
+      margin-bottom: 40px;
+    }
+    
+    .cta .subscribe-form {
+      margin: 0 auto;
+    }
+    
+    /* About */
+    .about {
+      padding: 100px 0;
+      background: var(--deep);
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    
+    .about-content h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .about-content p {
+      font-size: 17px;
+      color: var(--steel);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    
+    .about-values {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    
+    .value-item {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .value-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    
+    .value-item h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    
+    .value-item p {
+      font-size: 14px;
+      color: var(--steel);
+    }
+    
+    /* Contact */
+    .contact {
+      padding: 80px 0;
+      background: var(--navy);
+    }
+    
+    .contact-inner {
+      text-align: center;
+    }
+    
+    .contact-inner h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .contact-inner > p {
+      font-size: 18px;
+      color: var(--steel);
+      margin-bottom: 40px;
+    }
+    
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--deep);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      text-decoration: none;
+      color: var(--cloud);
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    
+    .contact-link:hover {
+      border-color: var(--coral);
+      transform: translateY(-2px);
+    }
+    
+    .contact-icon {
+      font-size: 20px;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      background: var(--deep);
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    footer p {
+      font-size: 14px;
+      color: var(--slate);
+    }
+    
+    /* ==================== MODAL STYLES ==================== */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(13, 27, 42, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal {
+      background: var(--navy);
+      border-radius: 24px;
+      max-width: 480px;
+      width: 100%;
+      padding: 48px;
+      position: relative;
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .modal-overlay.active .modal {
+      transform: translateY(0) scale(1);
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border: none;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    
+    .modal-close:hover {
+      background: var(--coral);
+    }
+    
+    .modal-close svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--cloud);
+      stroke-width: 2;
+    }
+    
+    .modal-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--slate), var(--steel));
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 24px;
+    }
+    
+    .modal h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    
+    .modal h2 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .modal > p {
+      text-align: center;
+      font-size: 16px;
+      color: var(--steel);
+      margin-bottom: 32px;
+    }
+    
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .modal-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .modal-form label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--cloud);
+    }
+    
+    .modal-form input {
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      color: var(--white);
+      transition: all 0.3s;
+    }
+    
+    .modal-form input::placeholder {
+      color: var(--slate);
+    }
+    
+    .modal-form input:focus {
+      outline: none;
+      background: rgba(255,255,255,0.1);
+      border-color: var(--steel);
+    }
+    
+    .modal-form button {
+      margin-top: 8px;
+      padding: 18px 32px;
+      font-size: 16px;
+      font-family: inherit;
+      font-weight: 600;
+      background: var(--white);
+      color: var(--deep);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    
+    .modal-form button:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    .modal-form button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .modal-footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--slate);
+    }
+    
+    .modal-footer a {
+      color: var(--steel);
+    }
+    
+    .form-error {
+      color: var(--coral);
+      font-size: 14px;
+      text-align: center;
+      padding: 12px;
+      background: rgba(255, 107, 107, 0.1);
+      border-radius: 8px;
+      display: none;
+    }
+    
+    .form-error.visible {
+      display: block;
+    }
+    
+    /* Responsive */
+    @media (max-width: 900px) {
+      .feature-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 16px;
+      }
+      
+      .nav-link {
+        font-size: 14px;
+      }
+      
+      .nav-cta {
+        padding: 10px 16px;
+        font-size: 13px;
+      }
+      
+      .story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      
+      .story-visual {
+        order: -1;
+      }
+      
+      .feature-list {
+        grid-template-columns: 1fr;
+      }
+      
+      .subscribe-form {
+        flex-direction: column;
+      }
+      
+      .subscribe-form button {
+        width: 100%;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      
+      .contact-methods {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .contact-link {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+      }
+      
+      .modal {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🍱</span>
+        <span class="logo-text">Plate Lunch <em>Digest</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="/about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <button class="nav-cta" onclick="openModal()">Subscribe</button>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="hero">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-tag">Your daily Hawaii news digest</div>
+        <p class="hero-greeting" id="greeting">Aloha kakahiaka.</p>
+        <h1>Plate Lunch <em>Digest</em></h1>
+        <p class="hero-desc">Here's your daily digest with the stories shaping Hawaii today — from business and real estate to clean energy and tourism. All the news, no fluff.</p>
+        <p class="hero-pidgin"><span>Garans</span> (gah-rahns) no kanak attack.</p>
+        <form class="subscribe-form" id="hero-form" onsubmit="handleHeroSubmit(event)">
+          <input type="email" id="hero-email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe free</button>
+        </form>
+        <p class="form-note">Join 1,000+ Hawaii professionals. Free daily digest.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-visual">
+          <div class="story-card">
+            <div class="story-emoji">🍱</div>
+            <p class="story-caption">Your morning briefing.<br>Everything you need. Nothing you don't.</p>
+          </div>
+        </div>
+        <div class="story-content">
+          <h2>What is Plate Lunch <em>Digest</em>?</h2>
+          <p>
+            Every morning, we scour dozens of local sources — <strong>Hawaii News Now, Civil Beat, Pacific Business News, Star-Advertiser</strong>, and more — so you don't have to.
+          </p>
+          <p>
+            We distill the most important stories into a <strong>quick, scannable digest</strong> that lands in your inbox before your first cup of coffee. Business moves. Real estate trends. Clean energy developments. Tourism updates. All the stories shaping Hawaii, in one place.
+          </p>
+          <p>
+            Like its namesake, Plate Lunch Digest is <strong>hearty, balanced, and satisfying</strong> — a complete meal of news without the filler. Read it in 5 minutes and start your day informed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="features">
+    <div class="container">
+      <div class="features-header">
+        <h2>What's in each <em>digest</em></h2>
+        <p>The stories that matter, organized by what moves Hawaii.</p>
+      </div>
+      <div class="feature-list">
+        <div class="feature-item">
+          <div class="feature-icon">💼</div>
+          <h3>Business & Economy</h3>
+          <p>Company news, market moves, job reports, and the deals reshaping Hawaii's economic landscape.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏠</div>
+          <h3>Real Estate</h3>
+          <p>Home prices, development projects, zoning changes, and housing policy updates across all islands.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚡</div>
+          <h3>Clean Energy</h3>
+          <p>Solar, wind, battery storage, and Hawaii's progress toward 100% renewable energy by 2045.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">✈️</div>
+          <h3>Tourism</h3>
+          <p>Visitor arrivals, airline routes, hotel occupancy, and the industry that drives 20% of Hawaii's economy.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏛️</div>
+          <h3>Government & Policy</h3>
+          <p>Legislative updates, county decisions, and political moves that affect business and daily life.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌊</div>
+          <h3>Environment & Infrastructure</h3>
+          <p>Climate, water, transportation, and the systems that keep the islands running.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta" id="subscribe">
+    <div class="container">
+      <h2>Start your morning informed.</h2>
+      <p>Free daily digest. 5 minute read. No spam, just news.</p>
+      <form class="subscribe-form" onsubmit="handleCTASubmit(event)">
+        <input type="email" id="cta-email" placeholder="your@email.com" required>
+        <button type="submit">Get the Digest</button>
+      </form>
+    </div>
+  </section>
+  
+  <section class="about" id="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>About</h2>
+          <p>
+            Plate Lunch Digest was born from a simple frustration: keeping up with Hawaii news meant juggling a dozen different sources every morning. We built this digest because we wanted something better — a single, well-curated briefing that covers what matters without the noise.
+          </p>
+          <p>
+            Every day, we read through Hawaii News Now, Civil Beat, Pacific Business News, the Star-Advertiser, and more so you don't have to. We distill the most important stories into a quick read that respects your time.
+          </p>
+          <p>
+            The name? It's a nod to Hawaii's most iconic meal — diverse ingredients, brought together on one plate. That's what we do with news. Business, real estate, energy, tourism — all in one place, every morning.
+          </p>
+        </div>
+        <div class="about-values">
+          <div class="value-item">
+            <span class="value-icon">📰</span>
+            <div>
+              <h3>Curated, not aggregated</h3>
+              <p>We read everything so we can surface what actually matters.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">⏱️</span>
+            <div>
+              <h3>Respectful of your time</h3>
+              <p>5 minutes. That's all it takes to stay informed.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon">🌺</span>
+            <div>
+              <h3>Made for Hawaii</h3>
+              <p>By locals, for locals. We know what stories matter here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <h2>Get in Touch</h2>
+        <p>Have a story tip? Want to advertise? Just want to say aloha? We'd love to hear from you.</p>
+        <div class="contact-methods">
+          <a href="mailto:hello@platelunchdigest.com" class="contact-link">
+            <span class="contact-icon">✉️</span>
+            <span>hello@platelunchdigest.com</span>
+          </a>
+          <a href="https://twitter.com/platelunchhi" class="contact-link">
+            <span class="contact-icon">𝕏</span>
+            <span>@platelunchhi</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>© 2026 Plate Lunch Digest · Made with aloha in Honolulu, Hawaiʻi</p>
+    </div>
+  </footer>
+  
+  <!-- Subscribe Modal -->
+  <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-linecap="round"/>
+        </svg>
+      </button>
+      
+      <div class="modal-icon">🍱</div>
+      <h2>Join the <em>Digest</em></h2>
+      <p>Get Hawaii's top business news in your inbox every morning. Free forever.</p>
+      
+      <form class="modal-form" id="modal-form" onsubmit="handleModalSubmit(event)">
+        <div class="form-error" id="form-error"></div>
+        
+        <div class="form-group">
+          <label for="modal-first-name">First name (optional)</label>
+          <input type="text" id="modal-first-name" placeholder="Your first name">
+        </div>
+        
+        <div class="form-group">
+          <label for="modal-email">Email address</label>
+          <input type="email" id="modal-email" placeholder="you@example.com" required>
+        </div>
+        
+        <button type="submit" id="modal-submit-btn">Subscribe — it's free</button>
+      </form>
+      
+      <p class="modal-footer">
+        Unsubscribe anytime. Read our <a href="/privacy">privacy policy</a>.
+      </p>
+    </div>
+  </div>
+  
+  <script>
+    // API Configuration
+    const API_BASE = 'https://app.platelunchdigest.com';
+    
+    // Hawaiian greeting based on time of day
+    function getHawaiianGreeting() {
+      const now = new Date();
+      const hour = now.getHours();
+      
+      if (hour >= 5 && hour < 12) {
+        return "Aloha kakahiaka.";
+      } else if (hour >= 12 && hour < 13) {
+        return "Aloha awakea.";
+      } else if (hour >= 13 && hour < 17) {
+        return "Aloha ʻauinalā.";
+      } else {
+        return "Aloha ahiahi.";
+      }
+    }
+    
+    document.getElementById('greeting').textContent = getHawaiianGreeting();
+    
+    // Modal functions
+    function openModal() {
+      document.getElementById('modal-overlay').classList.add('active');
+      document.body.classList.add('modal-open');
+      document.getElementById('modal-email').focus();
+    }
+    
+    function closeModal() {
+      document.getElementById('modal-overlay').classList.remove('active');
+      document.body.classList.remove('modal-open');
+    }
+    
+    function handleOverlayClick(event) {
+      if (event.target === event.currentTarget) {
+        closeModal();
+      }
+    }
+    
+    // Close modal on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+    
+    // Handle hero form - opens modal with email pre-filled
+    function handleHeroSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('hero-email').value;
+      document.getElementById('modal-email').value = email;
+      openModal();
+    }
+    
+    // Handle CTA form - opens modal with email pre-filled
+    function handleCTASubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('cta-email').value;
+      document.getElementById('modal-email').value = email;
+      openModal();
+    }
+    
+    // Handle modal form submission
+    async function handleModalSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('modal-submit-btn');
+      const errorEl = document.getElementById('form-error');
+      const email = document.getElementById('modal-email').value;
+      const firstName = document.getElementById('modal-first-name').value;
+      
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Subscribing...';
+      errorEl.classList.remove('visible');
+      
+      try {
+        const response = await fetch(API_BASE + '/api/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email,
+            first_name: firstName
+          })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          // Redirect to thank you page
+          window.location.href = '/thank-you';
+        } else {
+          // Show error
+          errorEl.textContent = data.error || 'Something went wrong. Please try again.';
+          errorEl.classList.add('visible');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Subscribe — it\'s free';
+        }
+      } catch (error) {
+        errorEl.textContent = 'Connection error. Please try again.';
+        errorEl.classList.add('visible');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Subscribe — it\'s free';
+      }
+    }
+  </script>
+</body>
+</html>

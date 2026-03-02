@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plate Lunch Digest — Annotated Template</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #f5f5f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .title-block {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .title-block h1 {
+      color: #0D1B2A;
+      font-size: 28px;
+      margin: 0 0 8px 0;
+    }
+    .title-block p {
+      color: #778DA9;
+      font-size: 14px;
+      margin: 0;
+    }
+    .annotated-row {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
+    .annotation {
+      width: 200px;
+      flex-shrink: 0;
+      padding: 20px 20px 20px 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    .annotation-content {
+      text-align: right;
+      padding-right: 15px;
+      border-right: 3px solid #415A77;
+      min-height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .annotation-content .label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #415A77;
+      margin: 0 0 4px 0;
+    }
+    .annotation-content .desc {
+      font-size: 12px;
+      color: #778DA9;
+      margin: 0;
+      line-height: 1.4;
+    }
+    .annotation-content .frequency {
+      font-size: 10px;
+      color: #0D1B2A;
+      background: #E0E1DD;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-top: 6px;
+      display: inline-block;
+    }
+    .email-section {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="title-block">
+      <h1>Plate Lunch Digest — Email Template</h1>
+      <p>Annotated wireframe for review</p>
+    </div>
+
+    <!-- Email Container -->
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+      
+      <!-- ========== HEADER ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Header</p>
+                <p class="desc">Brand + date. Sets the tone.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="background: linear-gradient(135deg, #0D1B2A 0%, #1B263B 100%); padding: 40px 40px 35px 40px; text-align: center;">
+                    <h1 style="margin: 0; color: #ffffff; font-size: 32px; font-weight: 700; letter-spacing: 2px;">
+                      PLATE LUNCH DIGEST
+                    </h1>
+                    <p style="margin: 8px 0 0 0; color: #778DA9; font-size: 14px; letter-spacing: 1px;">
+                      Friday, February 28, 2026
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== DIGEST ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Digest</p>
+                <p class="desc">AI-generated summary of today's top stories. 2-3 paragraphs that give readers the full picture in 30 seconds.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="padding: 30px 40px 25px 40px; background-color: #ffffff;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-left: 4px solid #415A77; padding-left: 20px;">
+                          <h2 style="margin: 0 0 12px 0; color: #0D1B2A; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Today's Digest
+                          </h2>
+                          <p style="margin: 0 0 14px 0; color: #415A77; font-size: 15px; line-height: 1.7;">
+                            Hawaiian Electric unveiled a $2.5 billion grid modernization plan this morning, the largest infrastructure investment in the utility's history. The plan targets 100% renewable energy by 2040 and includes new battery storage facilities on every island — a direct response to criticism following the Maui wildfires.
+                          </p>
+                          <p style="margin: 0 0 14px 0; color: #415A77; font-size: 15px; line-height: 1.7;">
+                            Meanwhile, Maui's tourism recovery hit a major milestone: visitor arrivals surged 23% year-over-year, exceeding pre-fire levels for the first time. West Maui hotels are reporting 85% occupancy, though residents remain divided on the pace of reopening.
+                          </p>
+                          <p style="margin: 0; color: #415A77; font-size: 15px; line-height: 1.7;">
+                            In other news: Oahu's median home price climbed to $1.15M (up 8% YoY), Kauai hit a 95% renewable energy milestone after running on solar and hydro for 18 straight days, and a Big Island seaweed startup just raised $15M to triple production capacity.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== TOP STORIES ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Top Stories</p>
+                <p class="desc">1-3 most important stories of the day. Featured story gets a highlight card, others are compact.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="padding: 20px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #0D1B2A; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #0D1B2A; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Top Stories
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+                      <tr>
+                        <td style="padding: 20px;">
+                          <h3 style="margin: 0 0 10px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 20px; font-weight: 700; line-height: 1.3;">
+                              Hawaiian Electric Announces $2.5B Grid Modernization Plan
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 12px 0; color: #415A77; font-size: 15px; line-height: 1.6;">
+                            The utility unveiled a comprehensive infrastructure upgrade targeting 100% renewable energy by 2040, including new battery storage facilities across all islands.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">
+                            Hawaii News Now · 2 hours ago
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px 40px 20px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Maui Tourism Numbers Surge 23% as Recovery Accelerates
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            Visitor arrivals exceeded pre-fire levels for the first time, with West Maui hotels reporting 85% occupancy.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Civil Beat · 4 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== CATEGORY STORIES ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Category Stories</p>
+                <p class="desc">1-3 stories per category. Categories rotate based on news: Business, Real Estate, Clean Energy, Tourism, Politics, etc.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <!-- Business -->
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Business
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px 8px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Local Tech Startup Raises $15M to Expand Ocean Farming Operations
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            Blue Aqua Hawaii plans to triple seaweed production capacity with new Big Island facility.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Pacific Business News · 5 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 40px 20px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-top: 1px solid #E0E1DD; padding-top: 12px;">
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Costco Confirms Second Maui Location Opening 2027
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            The Kihei store will create 250 jobs and ease congestion at the Kahului warehouse.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Maui Now · 6 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Real Estate -->
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Real Estate
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px 8px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Oahu Median Home Price Hits $1.15M, Up 8% Year-Over-Year
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            Limited inventory continues to drive prices despite higher mortgage rates.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Honolulu Star-Advertiser · 8 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 40px 20px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-top: 1px solid #E0E1DD; padding-top: 12px;">
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Kakaako Tower Project Secures Final Permits After 3-Year Delay
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            The 45-story mixed-use development will add 380 residential units downtown.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Hawaii Life Blog · 10 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Clean Energy -->
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Clean Energy
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px 20px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td>
+                          <h3 style="margin: 0 0 6px 0;">
+                            <a href="#" style="color: #0D1B2A; text-decoration: none; font-size: 17px; font-weight: 600; line-height: 1.4;">
+                              Kauai Achieves 95% Renewable Energy Milestone
+                            </a>
+                          </h3>
+                          <p style="margin: 0 0 8px 0; color: #415A77; font-size: 14px; line-height: 1.5;">
+                            KIUC reports island ran entirely on solar and hydro for 18 consecutive days last month.
+                          </p>
+                          <p style="margin: 0; color: #778DA9; font-size: 12px;">Garden Island · 12 hours ago</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== INTERISLAND FLIGHTS ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Interisland Fares</p>
+                <p class="desc">Weekend flight deals from Honolulu. Shows price vs. average and links to Skyscanner (affiliate).</p>
+                <span class="frequency">Wed & Fri only</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Weekend Interisland Fares
+                          </h2>
+                          <p style="margin: 4px 0 0 0; color: #778DA9; font-size: 12px;">Fri Feb 28 – Sun Mar 1 · One-way prices</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Fare 1 -->
+                <tr>
+                  <td style="padding: 15px 40px 8px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #0D1B2A;">
+                      <tr>
+                        <td style="padding: 16px;">
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td style="vertical-align: top;">
+                                <p style="margin: 0 0 4px 0;">
+                                  <span style="display: inline-block; background: #0D1B2A; color: #ffffff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 3px;">Best Deal</span>
+                                </p>
+                                <h3 style="margin: 6px 0 4px 0; font-size: 17px; color: #0D1B2A; font-weight: 700;">
+                                  Honolulu → Maui
+                                </h3>
+                                <p style="margin: 0; color: #778DA9; font-size: 12px;">HNL – OGG · Southwest · Nonstop · 37 min</p>
+                              </td>
+                              <td width="100" style="text-align: right; vertical-align: top;">
+                                <p style="margin: 0; font-size: 28px; font-weight: 700; color: #0D1B2A;">$67</p>
+                                <p style="margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: #415A77;">42% below avg</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" style="padding-top: 12px;">
+                                <a href="#" style="display: inline-block; background: #0D1B2A; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">Book on Skyscanner →</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Fare 2 -->
+                <tr>
+                  <td style="padding: 8px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f9fa; border-radius: 8px;">
+                      <tr>
+                        <td style="padding: 16px;">
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td style="vertical-align: top;">
+                                <p style="margin: 0 0 4px 0;">
+                                  <span style="display: inline-block; background: #415A77; color: #ffffff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 3px;">Good Deal</span>
+                                </p>
+                                <h3 style="margin: 6px 0 4px 0; font-size: 17px; color: #0D1B2A; font-weight: 700;">
+                                  Honolulu → Kona
+                                </h3>
+                                <p style="margin: 0; color: #778DA9; font-size: 12px;">HNL – KOA · Hawaiian Airlines · Nonstop · 45 min</p>
+                              </td>
+                              <td width="100" style="text-align: right; vertical-align: top;">
+                                <p style="margin: 0; font-size: 28px; font-weight: 700; color: #0D1B2A;">$89</p>
+                                <p style="margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: #415A77;">28% below avg</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" style="padding-top: 12px;">
+                                <a href="#" style="display: inline-block; background: #0D1B2A; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">Book on Skyscanner →</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Fare 3 -->
+                <tr>
+                  <td style="padding: 8px 40px 20px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f9fa; border-radius: 8px;">
+                      <tr>
+                        <td style="padding: 16px;">
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td style="vertical-align: top;">
+                                <p style="margin: 0 0 4px 0;">
+                                  <span style="display: inline-block; background: #E0E1DD; color: #415A77; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 3px;">Average</span>
+                                </p>
+                                <h3 style="margin: 6px 0 4px 0; font-size: 17px; color: #0D1B2A; font-weight: 700;">
+                                  Honolulu → Kauai
+                                </h3>
+                                <p style="margin: 0; color: #778DA9; font-size: 12px;">HNL – LIH · Southwest · Nonstop · 30 min</p>
+                              </td>
+                              <td width="100" style="text-align: right; vertical-align: top;">
+                                <p style="margin: 0; font-size: 28px; font-weight: 700; color: #0D1B2A;">$98</p>
+                                <p style="margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: #778DA9;">Near avg price</p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td colspan="2" style="padding-top: 12px;">
+                                <a href="#" style="display: inline-block; background: #0D1B2A; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">Book on Skyscanner →</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== WEATHER ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Weather</p>
+                <p class="desc">Current conditions for all 4 major islands. Data pulled from NWS API.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            Island Weather
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px 25px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background: linear-gradient(135deg, #1B263B 0%, #415A77 100%); border-radius: 8px;">
+                      <tr>
+                        <td style="padding: 24px;">
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td width="50%" style="padding: 8px 12px 8px 0; vertical-align: top;">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="45" style="vertical-align: top;">
+                                      <span style="font-size: 28px;">☀️</span>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                      <p style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 700;">Oahu</p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 12px;">Honolulu</p>
+                                      <p style="margin: 4px 0 0 0; color: #ffffff; font-size: 22px; font-weight: 700;">82°<span style="font-size: 14px; font-weight: 400; color: #778DA9;"> F</span></p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 11px;">Sunny, light trades</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td width="50%" style="padding: 8px 0 8px 12px; vertical-align: top; border-left: 1px solid rgba(119,141,169,0.3);">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="45" style="vertical-align: top;">
+                                      <span style="font-size: 28px;">⛅</span>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                      <p style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 700;">Maui</p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 12px;">Kahului</p>
+                                      <p style="margin: 4px 0 0 0; color: #ffffff; font-size: 22px; font-weight: 700;">79°<span style="font-size: 14px; font-weight: 400; color: #778DA9;"> F</span></p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 11px;">Partly cloudy</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td width="50%" style="padding: 16px 12px 8px 0; vertical-align: top; border-top: 1px solid rgba(119,141,169,0.3);">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="45" style="vertical-align: top;">
+                                      <span style="font-size: 28px;">🌦️</span>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                      <p style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 700;">Big Island</p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 12px;">Kona / Hilo</p>
+                                      <p style="margin: 4px 0 0 0; color: #ffffff; font-size: 22px; font-weight: 700;">84°<span style="font-size: 14px; font-weight: 400; color: #778DA9;"> / </span>76°<span style="font-size: 14px; font-weight: 400; color: #778DA9;"> F</span></p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 11px;">Kona sunny, Hilo showers</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td width="50%" style="padding: 16px 0 8px 12px; vertical-align: top; border-left: 1px solid rgba(119,141,169,0.3); border-top: 1px solid rgba(119,141,169,0.3);">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td width="45" style="vertical-align: top;">
+                                      <span style="font-size: 28px;">🌧️</span>
+                                    </td>
+                                    <td style="vertical-align: top;">
+                                      <p style="margin: 0; color: #ffffff; font-size: 15px; font-weight: 700;">Kauai</p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 12px;">Lihue</p>
+                                      <p style="margin: 4px 0 0 0; color: #ffffff; font-size: 22px; font-weight: 700;">77°<span style="font-size: 14px; font-weight: 400; color: #778DA9;"> F</span></p>
+                                      <p style="margin: 2px 0 0 0; color: #778DA9; font-size: 11px;">Morning showers</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== PLATE LUNCH FRIDAY ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Plate Lunch Friday</p>
+                <p class="desc">Weekly local restaurant spotlight. Casual, insider-tip tone. Includes price, hours, directions.</p>
+                <span class="frequency">Fridays only</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="padding: 10px 40px 10px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="border-bottom: 2px solid #415A77; padding-bottom: 8px;">
+                          <h2 style="margin: 0; color: #415A77; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">
+                            🍱 Plate Lunch Friday
+                          </h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 15px 40px 25px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f8f9fa; border-radius: 8px; overflow: hidden;">
+                      <tr>
+                        <td style="padding: 20px;">
+                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td>
+                                <p style="margin: 0 0 4px 0;">
+                                  <span style="display: inline-block; background: #0D1B2A; color: #ffffff; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 8px; border-radius: 3px;">This Week's Pick</span>
+                                </p>
+                                <h3 style="margin: 10px 0 6px 0; font-size: 20px; color: #0D1B2A; font-weight: 700;">
+                                  Rainbow Drive-In
+                                </h3>
+                                <p style="margin: 0 0 12px 0; color: #778DA9; font-size: 13px;">
+                                  Kapahulu, Oahu · Since 1961
+                                </p>
+                                <p style="margin: 0 0 16px 0; color: #415A77; font-size: 15px; line-height: 1.6;">
+                                  The mixed plate with loco moco gravy on the side is the move. Two scoops rice, one scoop mac salad, and that perfectly crispy mahimahi. Cash only, but there's an ATM next door. Get there before 11:30 or expect a line.
+                                </p>
+                                <table role="presentation" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td style="padding-right: 20px;">
+                                      <p style="margin: 0; color: #778DA9; font-size: 12px;">💰 Mixed Plate</p>
+                                      <p style="margin: 2px 0 0 0; color: #0D1B2A; font-size: 16px; font-weight: 700;">$12.50</p>
+                                    </td>
+                                    <td style="padding-right: 20px;">
+                                      <p style="margin: 0; color: #778DA9; font-size: 12px;">⏰ Hours</p>
+                                      <p style="margin: 2px 0 0 0; color: #0D1B2A; font-size: 16px; font-weight: 700;">7am–9pm</p>
+                                    </td>
+                                    <td>
+                                      <p style="margin: 0; color: #778DA9; font-size: 12px;">📍 Location</p>
+                                      <p style="margin: 2px 0 0 0; color: #0D1B2A; font-size: 16px; font-weight: 700;">3308 Kanaina Ave</p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td style="padding-top: 16px;">
+                                <a href="#" style="display: inline-block; background: #0D1B2A; color: #ffffff; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">Get Directions →</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+      <!-- ========== FOOTER ========== -->
+      <tr>
+        <td>
+          <div class="annotated-row">
+            <div class="annotation">
+              <div class="annotation-content">
+                <p class="label">Footer</p>
+                <p class="desc">Brand, tagline, links (view online, share, preferences), unsubscribe.</p>
+                <span class="frequency">Every issue</span>
+              </div>
+            </div>
+            <div class="email-section">
+              <table role="presentation" width="600" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 0 0 8px 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(13,27,42,0.1);">
+                <tr>
+                  <td style="background-color: #0D1B2A; padding: 35px 40px;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td style="text-align: center;">
+                          <p style="margin: 0 0 8px 0; color: #ffffff; font-size: 18px; font-weight: 700; letter-spacing: 1px;">
+                            PLATE LUNCH DIGEST
+                          </p>
+                          <p style="margin: 0 0 20px 0; color: #778DA9; font-size: 13px; line-height: 1.6;">
+                            Your daily briefing on the stories shaping Hawaii.<br>
+                            Curated by AI. Delivered to humans.
+                          </p>
+                          <p style="margin: 0 0 20px 0;">
+                            <a href="#" style="color: #778DA9; text-decoration: none; font-size: 13px; margin: 0 12px;">View Online</a>
+                            <span style="color: #415A77;">·</span>
+                            <a href="#" style="color: #778DA9; text-decoration: none; font-size: 13px; margin: 0 12px;">Share</a>
+                            <span style="color: #415A77;">·</span>
+                            <a href="#" style="color: #778DA9; text-decoration: none; font-size: 13px; margin: 0 12px;">Preferences</a>
+                          </p>
+                          <p style="margin: 0; color: #415A77; font-size: 11px; line-height: 1.6;">
+                            You're receiving this because you subscribed at platelunchdigest.com<br>
+                            <a href="#" style="color: #415A77;">Unsubscribe</a> · <a href="#" style="color: #415A77;">Privacy Policy</a>
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- Legend -->
+    <div style="margin-top: 40px; padding: 20px; background: #ffffff; border-radius: 8px;">
+      <h3 style="margin: 0 0 15px 0; color: #0D1B2A; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Schedule Summary</h3>
+      <table style="width: 100%; font-size: 14px; color: #415A77;">
+        <tr>
+          <td style="padding: 8px 0; border-bottom: 1px solid #E0E1DD;"><strong style="color: #0D1B2A;">Every Issue</strong></td>
+          <td style="padding: 8px 0; border-bottom: 1px solid #E0E1DD;">Header, Digest, Top Stories, Category Stories, Weather, Footer</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; border-bottom: 1px solid #E0E1DD;"><strong style="color: #0D1B2A;">Wed & Fri</strong></td>
+          <td style="padding: 8px 0; border-bottom: 1px solid #E0E1DD;">Weekend Interisland Fares</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0;"><strong style="color: #0D1B2A;">Fridays Only</strong></td>
+          <td style="padding: 8px 0;">Plate Lunch Friday</td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+</body>
+</html>

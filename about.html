@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Plate Lunch Digest</title>
+  <meta name="description" content="Learn about Plate Lunch Digest, Hawaii's daily news briefing covering business, real estate, clean energy, and tourism.">
+  <meta property="og:title" content="About — Plate Lunch Digest">
+  <meta property="og:description" content="Learn about Plate Lunch Digest, Hawaii's daily news briefing.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://platelunchdigest.com/about">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Fraunces:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0D1B2A;
+      --navy: #1B263B;
+      --slate: #415A77;
+      --steel: #778DA9;
+      --cloud: #E0E1DD;
+      --white: #FFFFFF;
+      --coral: #FF6B6B;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background: var(--deep);
+      color: var(--cloud);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    
+    /* Navigation */
+    nav {
+      padding: 24px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--deep);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-family: 'Fraunces', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .logo-text {
+      display: flex;
+      gap: 6px;
+    }
+    
+    .logo em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--slate), var(--steel));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    
+    .nav-cta {
+      background: var(--white);
+      color: var(--deep);
+      padding: 12px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-cta:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    
+    .nav-link {
+      color: var(--steel);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--white);
+    }
+    
+    /* Page Hero */
+    .page-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(65, 90, 119, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    
+    .page-hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    
+    .page-hero h1 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .page-hero p {
+      font-size: 20px;
+      color: var(--steel);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Content Sections */
+    .about-section {
+      padding: 80px 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .about-section:first-of-type {
+      border-top: none;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    
+    .section-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .section-header h2 em {
+      font-style: italic;
+      color: var(--steel);
+    }
+    
+    .section-header p {
+      font-size: 18px;
+      color: var(--steel);
+    }
+    
+    /* Origin Story */
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .origin-text h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 28px;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+    
+    .origin-text p {
+      font-size: 17px;
+      color: var(--steel);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    
+    .origin-text p strong {
+      color: var(--cloud);
+    }
+    
+    .origin-visual {
+      background: var(--navy);
+      border-radius: 24px;
+      padding: 48px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .origin-emoji {
+      font-size: 80px;
+      margin-bottom: 24px;
+    }
+    
+    .origin-caption {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 20px;
+      color: var(--steel);
+      line-height: 1.5;
+    }
+    
+    /* Values Grid */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    
+    .value-card {
+      background: var(--navy);
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: all 0.3s ease;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.1);
+    }
+    
+    .value-icon {
+      font-size: 40px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .value-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .value-card p {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.6;
+    }
+    
+    /* Sources Section */
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    
+    .source-card {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: all 0.3s ease;
+    }
+    
+    .source-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255,255,255,0.1);
+    }
+    
+    .source-card h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    
+    .source-card p {
+      font-size: 12px;
+      color: var(--slate);
+    }
+    
+    /* FAQ Section */
+    .faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background: var(--navy);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    .faq-item h4 {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    
+    .faq-item p {
+      font-size: 15px;
+      color: var(--steel);
+      line-height: 1.7;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 100px 0;
+      text-align: center;
+      background: linear-gradient(to bottom, transparent, var(--navy));
+    }
+    
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: 40px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    
+    .cta-section > p {
+      font-size: 18px;
+      color: var(--steel);
+      margin-bottom: 40px;
+    }
+    
+    .subscribe-form {
+      display: flex;
+      gap: 12px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    
+    .subscribe-form input {
+      flex: 1;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-family: inherit;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      color: var(--white);
+      transition: all 0.3s;
+    }
+    
+    .subscribe-form input::placeholder {
+      color: var(--steel);
+    }
+    
+    .subscribe-form input:focus {
+      outline: none;
+      background: rgba(255,255,255,0.12);
+      border-color: var(--steel);
+    }
+    
+    .subscribe-form button {
+      padding: 16px 32px;
+      font-size: 15px;
+      font-family: inherit;
+      font-weight: 600;
+      background: var(--white);
+      color: var(--deep);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    
+    .subscribe-form button:hover {
+      background: var(--coral);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    
+    footer p {
+      font-size: 14px;
+      color: var(--slate);
+    }
+    
+    /* Responsive */
+    @media (max-width: 900px) {
+      .origin-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      
+      .origin-visual {
+        order: -1;
+      }
+      
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .sources-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .nav-links {
+        gap: 16px;
+      }
+      
+      .nav-link {
+        display: none;
+      }
+      
+      .sources-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .subscribe-form {
+        flex-direction: column;
+      }
+      
+      .subscribe-form button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🍱</span>
+        <span class="logo-text">Plate Lunch <em>Digest</em></span>
+      </a>
+      <div class="nav-links">
+        <a href="/about" class="nav-link active">About</a>
+        <a href="/#contact" class="nav-link">Contact</a>
+        <a href="/#subscribe" class="nav-cta">Subscribe</a>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="page-hero">
+    <div class="container">
+      <h1>About <em>us</em></h1>
+      <p>The story behind Hawaii's daily news briefing — and why we built it.</p>
+    </div>
+  </section>
+  
+  <section class="about-section">
+    <div class="container">
+      <div class="origin-grid">
+        <div class="origin-text">
+          <h3>Why we built this</h3>
+          <p>
+            Keeping up with Hawaii news used to mean juggling a dozen tabs every morning — Civil Beat for investigations, Pacific Business News for deals, Star-Advertiser for breaking news, Hawaii News Now for everything else.
+          </p>
+          <p>
+            We built <strong>Plate Lunch Digest</strong> because we wanted something better: a single, well-curated briefing that covers what matters without the noise. One email. Five minutes. Everything you need to know.
+          </p>
+          <p>
+            The name is a nod to Hawaii's most iconic meal — diverse ingredients, brought together on one plate. That's what we do with news. Business, real estate, energy, tourism — all in one place, every morning.
+          </p>
+        </div>
+        <div class="origin-visual">
+          <div class="origin-emoji">🍱</div>
+          <p class="origin-caption">
+            Diverse ingredients.<br>
+            One plate.<br>
+            Perfectly balanced.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What we <em>believe</em></h2>
+        <p>The principles that guide our curation.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon">📰</span>
+          <h3>Curated, not aggregated</h3>
+          <p>We read everything so we can surface what actually matters. No algorithms, no clickbait — just thoughtful selection by people who understand Hawaii.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">⏱️</span>
+          <h3>Respectful of your time</h3>
+          <p>5 minutes is all it takes. We distill complex stories into clear summaries so you can stay informed without the information overload.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">🌺</span>
+          <h3>Made for Hawaii</h3>
+          <p>By locals, for locals. We know which stories matter here, which sources to trust, and what context you need to understand the bigger picture.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">🎯</span>
+          <h3>Signal over noise</h3>
+          <p>We skip the sensational and focus on the substantial. No crime blotters, no celebrity gossip — just the stories that shape the future of the islands.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">💬</span>
+          <h3>Clear, direct writing</h3>
+          <p>We write like we talk. No jargon, no filler. Every word earns its place in your inbox.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">🤝</span>
+          <h3>Free forever</h3>
+          <p>The core digest will always be free. We believe everyone deserves access to quality local news coverage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our <em>sources</em></h2>
+        <p>We monitor the best local news sources so you don't have to.</p>
+      </div>
+      <div class="sources-grid">
+        <div class="source-card">
+          <h4>Hawaii News Now</h4>
+          <p>Breaking news</p>
+        </div>
+        <div class="source-card">
+          <h4>Civil Beat</h4>
+          <p>Investigative</p>
+        </div>
+        <div class="source-card">
+          <h4>Pacific Business News</h4>
+          <p>Business</p>
+        </div>
+        <div class="source-card">
+          <h4>Star-Advertiser</h4>
+          <p>Local news</p>
+        </div>
+        <div class="source-card">
+          <h4>Maui Now</h4>
+          <p>Maui coverage</p>
+        </div>
+        <div class="source-card">
+          <h4>Garden Island</h4>
+          <p>Kauai coverage</p>
+        </div>
+        <div class="source-card">
+          <h4>West Hawaii Today</h4>
+          <p>Big Island</p>
+        </div>
+        <div class="source-card">
+          <h4>+ 20 more</h4>
+          <p>Full coverage</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="about-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently <em>asked</em></h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>When does the digest arrive?</h4>
+          <p>Every weekday morning around 6:00 AM Hawaii time. It'll be waiting in your inbox before your first cup of coffee.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is it really free?</h4>
+          <p>Yes. The daily digest is completely free and always will be. We may offer premium features in the future, but the core briefing stays free.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do you pick stories?</h4>
+          <p>We focus on stories that have real impact — business moves, policy changes, development projects, and trends that affect Hawaii's future. We skip crime blotters, celebrity news, and sensational headlines.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I suggest a story?</h4>
+          <p>Absolutely! We love tips from readers. Send story ideas to hello@platelunchdigest.com and we'll check it out.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I unsubscribe?</h4>
+          <p>Every email has an unsubscribe link at the bottom. One click and you're out. No hard feelings — we hope you come back someday.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to stay informed?</h2>
+      <p>Join 1,000+ Hawaii professionals who start their day with the Digest.</p>
+      <form class="subscribe-form" action="/" method="GET" onsubmit="handleSubscribe(event)">
+        <input type="email" id="cta-email" name="email" placeholder="your@email.com" required>
+        <button type="submit">Get the Digest</button>
+      </form>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <p>© 2026 Plate Lunch Digest · Made with aloha in Honolulu, Hawaiʻi</p>
+    </div>
+  </footer>
+  
+  <script>
+    // Redirect to home page with email to trigger modal
+    function handleSubscribe(event) {
+      event.preventDefault();
+      const email = document.getElementById('cta-email').value;
+      window.location.href = '/?email=' + encodeURIComponent(email) + '#subscribe';
+    }
+  </script>
+</body>
+</html>
