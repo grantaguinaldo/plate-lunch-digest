@@ -1171,4 +1171,11 @@
     // Handle modal form submission
     async function handleModalSubmit(event) {
       event.preventDefault();
-      const email = document.getElementById('
+      const email = document.getElementById('modal-email').value;
+      const submitBtn = document.getElementById('modal-submit-btn');
+      const errorEl = document.getElementById('form-error');
+      await subscribeEmail(email, submitBtn, errorEl, 'Subscribe free');
+    }
+  </script>
+</body>
+</html>
